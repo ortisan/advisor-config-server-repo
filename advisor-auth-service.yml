@@ -1,5 +1,6 @@
 server:
   port: 9666
+
 eureka:
   client:
     registerWithEureka: true
@@ -8,5 +9,9 @@ eureka:
       defaultZone: http://localhost:9777/eureka/
 
 ortiz:
-  auth:
-    google_token_service_info_url: https://www.googleapis.com/oauth2/v1/tokeninfo?access_token={access_token}
+  security:
+    google_token_info_service_url: https://www.googleapis.com/oauth2/v1/tokeninfo?access_token={access_token}
+
+    urls_non_secured:
+      - '/validate'
+      - '/invalidate'
