@@ -2,6 +2,11 @@ server:
   port: 9888
 
 spring:
+  data:
+    cassandra:
+      keyspace_name: advisor_ks
+      contact_points: localhost
+      port: 9042
   redis:
     host: localhost
     port: 6379
