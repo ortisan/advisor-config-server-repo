@@ -10,10 +10,10 @@ spring:
 
 eureka:
   client:
-    register_with_eureka: true
-    fetch_registry: true
-    service_url:
-      default_zone: http://localhost:9777/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:9777/eureka/
 
 ortiz:
   security:

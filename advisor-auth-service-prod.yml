@@ -5,6 +5,6 @@ spring:
 
 eureka:
   client:
-    service_url:
-      default_zone: http://discovery-server:9777/eureka/
+    serviceUrl:
+      defaultZone: http://discovery-server:9777/eureka/
 
