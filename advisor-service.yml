@@ -1,21 +1,29 @@
 server:
   port: 9888
-eureka:
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:9777/eureka/
 
 spring:
   redis:
     host: localhost
     port: 6379
     password:
-
     jedis:
       pool:
         max-active: 7
         max-idle: 7
         min-idle: 2
         max-wait: -1ms
+
+eureka:
+  client:
+    register_with_eureka: true
+    fetch_registry: true
+    service_url:
+      default_zone: http://localhost:9777/eureka/
+
+ortiz:
+  security:
+    google_token_info_service_url: https://www.googleapis.com/oauth2/v1/tokeninfo?access_token={access_token}
+    urls_non_secured:
+      - '/validate'
+      - '/invalidate'
+

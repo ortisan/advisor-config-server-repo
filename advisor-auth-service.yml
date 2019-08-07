@@ -1,17 +1,23 @@
 server:
   port: 9666
 
+spring:
+  data:
+    cassandra:
+      keyspace_name: advisor_ks
+      contact_points: localhost
+      port: 9042
+
 eureka:
   client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:9777/eureka/
+    register_with_eureka: true
+    fetch_registry: true
+    service_url:
+      default_zone: http://localhost:9777/eureka/
 
 ortiz:
   security:
     google_token_info_service_url: https://www.googleapis.com/oauth2/v1/tokeninfo?access_token={access_token}
-
     urls_non_secured:
       - '/validate'
       - '/invalidate'

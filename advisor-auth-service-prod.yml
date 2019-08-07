@@ -1,4 +1,10 @@
+spring:
+  data:
+    cassandra:
+      contact_points: cassandra
+
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://discovery-server:9777/eureka/
+    service_url:
+      default_zone: http://discovery-server:9777/eureka/
+
